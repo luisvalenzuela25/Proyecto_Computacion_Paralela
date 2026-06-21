@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────
+# Proyecto Final — Procesamiento de Imágenes
+# Computación Paralela y Distribuida
+# ─────────────────────────────────────────────
+ 
+# Núcleo científico
+numpy==1.26.4
+Pillow==10.3.0
+ 
+# Paralelismo distribuido en CPU (Integrantes 1 y 2)
+mpi4py==3.1.6
+ 
+# Detección de bordes secuencial/MPI (Integrante 2)
+scipy==1.13.0
+ 
+# Aceleración GPU con CuPy (Integrante 3)
+# Requiere CUDA 12.x instalado en el host
+# Comentar esta línea si se ejecuta sin GPU
+cupy-cuda12x==13.1.0
+ 
+# Generación de gráficos comparativos
+matplotlib==3.8.4
