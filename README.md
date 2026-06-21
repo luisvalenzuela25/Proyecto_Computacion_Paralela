@@ -61,9 +61,6 @@ pip install cupy-cuda12x==13.1.0
 ```bash
 # Escala de grises
 python filtros/escala_grises.py --seq imagenes_prueba/color_4k.jpg
- 
-# Desenfoque
-python filtros/desenfoque.py --seq imagenes_prueba/color_4k.jpg
 ```
  
 > Los resultados se guardan en `resultados/`.
@@ -71,11 +68,11 @@ python filtros/desenfoque.py --seq imagenes_prueba/color_4k.jpg
 ### Versión MPI (paralela en CPU)
  
 ```bash
-# Escala de grises con 4 procesos
+# Escala de grises con 4 procesos (si hay suficientes núcleos)
 mpirun -np 4 python filtros/escala_grises.py --mpi imagenes_prueba/color_4k.jpg
  
-# Desenfoque con 4 procesos
-mpirun -np 4 python filtros/desenfoque.py --mpi imagenes_prueba/color_4k.jpg
+# Dentro de Docker, o en máquina con pocos núcleos
+mpiexec --allow-run-as-root --oversubscribe -n 4 python filtros/escala_grises.py --mpi imagenes_prueba/color_4k.jpg
 ```
  
 > Puedes variar `-np` con los valores 1, 2, 4, 8 para las pruebas de speedup.
