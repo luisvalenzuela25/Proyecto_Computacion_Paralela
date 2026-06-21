@@ -12,8 +12,10 @@
 ```
 mi_proyecto_paralela/
 ├── imagenes_prueba/
-│   ├── color_4k.jpg        # imagen a color para pruebas
-│   └── gris_hd.jpg         # imagen en escala de grises para pruebas
+│   ├── color_1920p.jpg        
+│   ├── color_2400.jpg
+|   ├── gris_1920p.jpg
+|   └── gris_2400p.jpg  
 ├── resultados/             # las imágenes procesadas se guardan aquí
 ├── filtros/
 │   ├── __init__.py
